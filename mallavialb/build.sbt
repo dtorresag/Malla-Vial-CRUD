@@ -1,4 +1,4 @@
-name := """MallaVial"""
+name := """mallaVialB"""
 organization := "com.geoSAT"
 
 version := "1.0-SNAPSHOT"
