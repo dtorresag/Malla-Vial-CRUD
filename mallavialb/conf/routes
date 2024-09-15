@@ -5,5 +5,10 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
 
-# Map static resources from the /public folder to the /assets URL path
+POST /segmentos                   controllers.SegmentoController.createSegmento(request: Request) 
+GET  /segmentos					  controllers.SegmentoController.listSegmentos()
+GET  /segmentos/:id               controllers.SegmentoController.getSegmento(id: Long)
+PUT  /segmentos/:id 			  controllers.SegmentoController.updateSegmento(id: Long, request: Request)
+DELETE /segmentos/:id   		  controllers.SegmentoController.deleteSegmento(id: Long)
+
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
