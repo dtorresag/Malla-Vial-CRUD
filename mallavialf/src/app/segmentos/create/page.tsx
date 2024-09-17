@@ -11,13 +11,11 @@ const CreateSegmento: React.FC = () => {
   const router = useRouter();
 
   const onFinish = async (values: any) => {
-    try {
-      console.log('Enviando datos al backend:', values); 
-      await createSegmento(values); // Cambia esto a la función para crear un segmento
+    try { 
+      await createSegmento(values);
       message.success('Segmento creado con éxito');
       router.push('/segmentos');
     } catch (error) {
-      console.error('Error en la creación:', error); 
       message.error('Error al crear el segmento');
     }
   };

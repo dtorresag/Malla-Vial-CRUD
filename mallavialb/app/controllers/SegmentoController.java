@@ -57,7 +57,7 @@ public class SegmentoController extends Controller {
 		// Verificar que los campos no estén vacíos o no válidos
 		 if (largo <= 0 || direccion.isEmpty() || tipoDeVia.isEmpty() || numeroDeCalzadas <= 0 || numeroDeBordillos < 0) {     
 			 return CompletableFuture.completedFuture(
-			            badRequest(Json.newObject().put("error", "Los campos no son válidos. Verifica el largo, dirección, tipo de vía y número de calzadas y bordillos."))
+			            badRequest(Json.newObject().put("error", "Los campos no son válidos. Verifica el largo, dirección, tipo de vía, calzadas y bordillos."))
 			                .withHeader("Access-Control-Allow-Origin", "*")
 			                .withHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
 			                .withHeader("Access-Control-Allow-Headers", "Content-Type")
